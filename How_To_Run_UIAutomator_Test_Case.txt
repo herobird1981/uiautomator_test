@@ -1,0 +1,296 @@
+**********************************************************************************************************
+**********************************************************************************************************
+**********************************************************************************************************
+***                                                                                                    ***
+***   Running condition:                                                                               ***
+***   1. You need to copy autorunner.jar to /data/local/tmp folder on EVB.                             ***                               
+***   2. Set system language as English.                                                               ***
+***   3. You can execute all cases via both USB and UART ports.                                        ***                       
+***   4. Before running test cases, you should carefully read this document for parameters settings.   ***                                                            
+***   																								   ***
+**********************************************************************************************************
+**********************************************************************************************************
+**********************************************************************************************************
+
+
+TestCase-1 (CLASS: com.infomax.uitest.add_icon_to_workspace):
+   --- Description: Consecutively create pages and add icons to workspace.
+   --- Precondition: Make sure there's no any icon on workspace.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -e step 100 -c com.infomax.uitest.add_icon_to_workspace
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 100.
+		-e step [count] --count: to set steps for icon moving. Default value is 70.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-2 (CLASS: com.infomax.uitest.remove_icon_from_workspace):
+   --- Description: Consecutively remove icons from workspace.
+   --- Precondition: Before running the case, make sure TestCase-1 had been executed already.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.remove_icon_from_workspace
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 100.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-3 (CLASS: com.infomax.uitest.app_launching_from_gridview):
+   --- Description: Launch all system build-in apps one by one via gridview.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.app_launching_from_gridview
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 1000.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-4 (CLASS: com.infomax.uitest.app_launching_from_recent_list):
+   --- Description: Randomly select and launch apps from recent app list.
+   --- Precondition: Before running the case, make sure TestCase-3 had been executed already.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.app_launching_from_recent_list
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 1000.
+
+---------------------------------------------------------------------------------------------------
+		
+TestCase-5 (CLASS: com.infomax.uitest.camera_camcorder_switch):
+   --- Description: Consecutively switch between camera and camcorder.
+   --- Precondition: Camera and camcorder can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.camera_camcorder_switch
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 600.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-6 (CLASS: com.infomax.uitest.capture_pic):
+   --- Description: Consecutively capture pictures via camera.
+   --- Precondition: Camera can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.capture_pic
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 2000.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-7 (CLASS: com.infomax.uitest.fmradio_switch):
+   --- Description: Consecutively turn on/off FM radio.
+   --- Precondition: FM radio can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.fmradio_switch
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-8 (CLASS: com.infomax.uitest.frontrear_camera_switch):
+   --- Description: Consecutively switch between front/rear camera.
+   --- Precondition: Front & rear camera can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.frontrear_camera_switch
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 600.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-9 (CLASS: com.infomax.uitest.psreboot):(***********************TBD**************************)
+   --- Description: Consecutively trigger PS reboot under EM mode.
+   --- Precondition: TBD.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.psreboot
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is TBD.
+	
+---------------------------------------------------------------------------------------------------
+	
+TestCase-10 (CLASS: com.infomax.uitest.bt_onoff):
+   --- Description: Consecutively turn on/off bluetooth.
+   --- Precondition: Bluetooth can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.bt_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-11 (CLASS: com.infomax.uitest.wifi_onoff):
+   --- Description: Consecutively turn on/off bluetooth.
+   --- Precondition: Wi-Fi can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.wifi_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-12 (CLASS: com.infomax.uitest.wifi_bt_onoff):
+   --- Description: Alternatively turn on/off Wi-Fi & bluetooth.
+   --- Precondition: Wi-Fi & Bluetooth can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.wifi_bt_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-13 (CLASS: com.infomax.uitest.flight_mode_onoff):
+   --- Description: Consecutively turn on/off flight mode.
+   --- Precondition: Flight mode can work well.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.flight_mode_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-14 (CLASS: com.infomax.uitest.gprs_onoff):
+   --- Description: Consecutively turn on/off GPRS data connection.
+   --- Precondition: GPRS could be normally enabled/disabled.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.gprs_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-15 (CLASS: com.infomax.uitest.clock_add):
+   --- Description: Add massive alarm clocks in 'Deskclock'.
+   --- Precondition: Remove all alarm clock items before script running.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.clock_add
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 300.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-16 (CLASS: com.infomax.uitest.clock_delete):
+   --- Description: Remove all alarm clock items from 'Deskclock'.
+   --- Precondition: Before running the case, make sure TestCase-15 had been executed already.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.clock_delete
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+	
+---------------------------------------------------------------------------------------------------
+
+TestCase-17 (CLASS: com.infomax.uitest.contact_add):
+   --- Description: Create massive entries in contacts.
+   --- Precondition: Set default input method,and remove snyc account of system.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.contact_add
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 1000.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-18 (CLASS: com.infomax.uitest.contact_delete):
+   --- Description: Remove all entries in 'Contacts'.
+   --- Precondition: Before running the case, make sure TestCase-17 had been executed already.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.contact_delete
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 1000.
+	
+---------------------------------------------------------------------------------------------------
+
+TestCase-19 (CLASS: com.infomax.uitest.timer_add):
+   --- Description: Created massive entries in timer.
+   --- Precondition: Remove all stopwatch record.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.timer_add
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 300.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-20 (CLASS: com.infomax.uitest.timer_delete):
+   --- Description: Remove all entries in timer.
+   --- Precondition: Before running the case, make sure TestCase-19 had been executed already.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.timer_delete
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 300.
+	
+---------------------------------------------------------------------------------------------------
+
+TestCase-21 (CLASS: com.infomax.uitest.edit_message):
+   --- Description: Consecutively create message as draft.
+   --- Precondition: keep phone in "apk list" launcher
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.edit_message
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 1000.
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-22 (CLASS: com.infomax.uitest.send_message):
+   --- Description: Consecutively send 100 message to a phone number.
+   --- Precondition: keep phone in "apk list" launcher.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.send_message
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 100.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-23 (CLASS: com.infomax.uitest.delete_message):
+   --- Description: Consecutively Delete 1000 message in message thread list.
+   --- Precondition: keep phone in "apk list" launcher.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.delete_message
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 1000.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-24 (CLASS: com.infomax.uitest.mo_call):
+   --- Description: Consecutively make 1000 mocall to a phone number.
+   --- Precondition: keep phone in "apk list" launcher.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -e phone 13884394836 -c com.infomax.uitest.mo_call
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default value is 1000.
+		-e phone [number] --number: to set a phone number for the testing. Default number is "10086".
+		
+---------------------------------------------------------------------------------------------------
+
+TestCase-25 (CLASS: com.infomax.uitest.screen_unlock_password):
+   --- Description: Unlock screen by password.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.screen_unlock_password
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 600.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-26 (CLASS: com.infomax.uitest.screen_unlock_pin):
+   --- Description: Unlock screen by pin code.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.screen_unlock_pin
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 600.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-27 (CLASS: com.infomax.uitest.screen_unlock_slide):
+   --- Description: Unlock screen by sliding on panel.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.screen_unlock_slide
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 600.
+
+---------------------------------------------------------------------------------------------------
+
+TestCase-28 (CLASS: com.infomax.uitest.screen_unlock_pattern):
+   --- Description: Unlock screen by pattern.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.screen_unlock_pattern
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 600.
+
+-------------------------------------------------------------------------------------------------
+
+TestCase-29 (CLASS: com.infomax.uitest.lcd_onoff):
+   --- Description: Consecutively turn on/off LCD backlight.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.lcd_onoff
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 1000.
+		
+-------------------------------------------------------------------------------------------------	
+
+TestCase-30 (CLASS: com.infomax.uitest.adjust_backlight):
+   --- Description: Consecutively adjust LCM backlight level.
+   --- Precondition: None.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.adjust_backlight
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 1000.		
+		
+-------------------------------------------------------------------------------------------------		
+
+TestCase-31 (CLASS: com.infomax.uitest.web_browsing):
+   --- Description: Randomly select a bookmark to make browsing.
+   --- Precondition: Make sure GPRS/EDGE/Wi-Fi data connection is ok.
+   --- Command: # uiautomator runtest autorunner.jar -e loop 5 -c com.infomax.uitest.web_browsing
+   --- Parameters:
+		-e loop [count] --count: to set cycle number for the testing. Default number is 600.
+
+-------------------------------------------------------------------------------------------------
+
